@@ -1,0 +1,22 @@
+Version 1.0.0
+
+-Added graphing capabilities
+-Added functionality for basic unary and binary operations
+-Added functionality for non-inverse trig functions (sine, cosine, tangent etc.)
+-Added functionality for linear equations
+-Added functionality for exponential functions
+-Read the README doc for more details
+
+Version 1.1.0
+- Added second function graphing capabilities
+- Added placeholder for the value of integrals in the second quadrant :) 
+
+Version 1.1.2
+- Mostly resolved issue dealing with undefined values for functions like 1/x etc when drawing graphics.
+- Added variable 'Z' use z in an equation for a fun surprise
+- Added functionality for the natural log, must run through log via log(x, 2.718)
+- Removed placeholder for the value of integrals while update is made to internal logic
+
+Version 1.2.1
+- Resolved issue with application not fitting on small screens for directed audiences
+- Added indication of which line you are typing on (red coloring of text);

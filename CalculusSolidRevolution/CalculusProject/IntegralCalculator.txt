@@ -1,0 +1,67 @@
+Greetings user, as of December 9, 2019 there is currently no display for the integral calculator, considering this,
+please as of right now use run the Integral.java file via the command prompt and follow the instructions below to get
+the most out of the calculator.
+
+To run the file calculating Integrals, you must do a little bit of coding to achieve the results you wish. As the 
+skills needed are currently out of my development knowledge, however I am looking into it. 
+
+To run the program you will need to edit the source code a tiny bit, of course a lesson in Java is needed so it will
+be brief. After making any edits to the file in src called IntegralCopyForTeacher please run the compile and execute
+files to see success, if any compiler errors show up please replace the main method with the one provided below and
+try again.
+
+The technique used to make integral calculus work within java requires the use of lambda syntax which is derived from
+lambda calculus, pretty ironic, so to edit the code however you want for whatever function you want please review the 
+API given below. To enter an exponential function you will need to you "Math.pow(a, b)" for example: 
+	Math.pow(x, 2) = x^2
+Then you can use standard mathematical symbols (+, -. /, *) to do any necessary operations afterwards a link will be 
+provided to the Java Math API to allow you to see the operations available. 
+
+*******************************************************************************************
+Copy and Paste into browser (https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html);
+*******************************************************************************************
+
+In this program there are three methods you can run that shows different ascepts of Integral Calculus and descriptions
+below:
+
+
+static double integral(double a, double b, boolean standAlone, FunctionInterface function)
+
+returns the area under the curve with a lower bound a and an upper bound b, with the function given in the form of a
+lambda expression (always for the boolean input true);
+
+static String threeDimensionalVolumeDiskX(double a, double b, FunctionInterface function)
+
+returns the volume of the resulting solid from the area of a function from lower bound a and an upper bound b with the 
+function given in the form of a lambda expression.
+
+static String threeDimensionalVolumeWasherX(double a, double b, FunctionInterface function1, FunctionInterface function2)
+
+returns the volume of the resulting solid from the area of a function from lower bound a and an upper bound b subtracted with function 2
+with the function given in the form of a lambda expression.
+
+***************************************************************************************
+EXAMPLES AND SAMPLE MAIN METHOD GIVEN BELOW
+***************************************************************************************
+Here is the main method for you to replace if things go wrong
+
+***************************************************************************************
+public static void main(String[] args) {
+	integral(0, 3, true, x -> {
+		return 3 * Math.pow(x, 3) + 5 * Math.pow(x, Math.E);
+	});
+	
+	threeDimensionalVolumeDiskX(0, Math.log(4), x -> {
+		return Math.pow(Math.pow(Math.E, -x), 2);
+	});
+}
+*****************************************************************************************
+Here are some example functions for you to paste into the 4th argument slot after changing the bounds
+1. x -> { return Math.pow(x, 2) + 5*x + 6; } (DON'T PASTE THE FOLLOWING) function x^2 + 5x + 6 
+2. x -> { return Math.pow((2*x), 3) + 5*Math.pow(x,2) + 6*x + 8; } (DON'T PASTE THE FOLLOWING) function 2x^3 + 5x^2 + 6x+ 8 
+
+Please make sure that your main method looks like the one above to avoid compiler errors
+
+
+You may need a JDK to compile these files as always a link is provided to the JDK to download and a video tutorial
+of how to configure your enviroment variables.
